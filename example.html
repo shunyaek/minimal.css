@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./minimal.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <article>
+            <h1>I am the title of this page and I am very important so read carefully.</h1>
+            <p>
+                Posted on <time datetime="2020-19-03">19th March, 2020</time> by <span>Harshit Doshi</span>
+            </p>
+            <section>
+                <h2>First section</h2>
+                <p>
+                    This is a paragraph. A paragraph can contain a <span>span element</span>. A paragraph
+                    can also contain <a href="#">links</a>.
+                </p>
+                <p>
+                    I am a paragraoh too! I have some <em>italicised</em> or <em>emphasized</em> text here with me.
+                    There is
+                    some
+                    <strong>bold</strong> or <strong>strong</strong> text here too. Isn't this website minimal and
+                    beautiful?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <h1>This is h-one heading</h1>
+                <h2>This is h-two heading</h2>
+                <h3>This is h-three heading</h3>
+                <h4>This is h-four heading</h4>
+                <h5>This is h-five heading</h5>
+                <h6>This is h-six heading</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </section>
+            <section>
+                <h2>Second section</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <h4>Code snippets will look like this!</h4>
+                <p>To print values to the JavaScript console in a browser or to the Node.js console, one can use the
+                    <code>console.log()</code> function.
+                </p>
+                <p>
+                    Larger blocks of code can be displayed as shown below where we demonstrate a simple web-server built
+                    using Node.js.
+                </p>
+                <pre>
+                    <code>
+const http = require('http')
+
+const hostname = '127.0.0.1'
+const port = process.env.PORT
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Hello World!\n')
+})
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`)
+})
+                    </code>
+                </pre>
+                <p>
+                    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo
+                    pharetra,
+                    est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh
+                    euismod
+                    gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+                    ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
+                    Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien
+                    sem,
+                    aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis
+                    nisl
+                    adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu.
+                    Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna
+                    nisl,
+                    mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+                </p>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        &#169 Harshit Doshi 2020
+    </footer>
+</body>
+
+</html>
