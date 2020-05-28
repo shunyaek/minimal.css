@@ -111,6 +111,16 @@ section {
   padding: var(--standard-padding);
 }
 
+img{ 
+  
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  opacity: 0.9;
+  object-fit: cover;
+}
+
+
 h1 {
   font-size: 3.5rem;
 }
