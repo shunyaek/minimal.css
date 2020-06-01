@@ -34,6 +34,7 @@ html {
 
 body,
 header,
+header nav,
 main,
 section,
 footer,
@@ -44,14 +45,14 @@ table th {
   padding: var(--standard-padding);
   margin: var(--standard-margin);
   max-width: none;
-  background-color: var(--background);
-  color: var(--text);
-  font-family: var(--sans-serif-font);
 }
 
 body {
   padding: 0rem 0rem;
   font-size: clamp(100%, 1rem + 2vw, 1.5rem);
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--sans-serif-font);
 }
 
 header,
@@ -64,9 +65,28 @@ header {
   text-align: start;
 }
 
-header nav {
-  padding: var(--standard-padding);
-  font-size: 1.5rem;
+header nav a:nth-child(1) {
+  color: var(--text);
+  text-decoration: none;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+  border: 0.2rem solid var(--text);
+}
+
+header nav a:nth-child(1):link {
+  color: var(--text);
+  text-decoration: none;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+}
+
+header nav a:nth-child(1):visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+header nav a:nth-child(1):hover {
+  text-decoration: none;
 }
 
 header nav a:link {
@@ -137,6 +157,7 @@ pre {
   font-family: var(--monospace-font);
   tab-size: 4;
   white-space: pre-wrap;
+  overflow: scroll;
 }
 
 pre {
@@ -159,10 +180,30 @@ table {
   max-width: 100%;
   border: 0.2rem solid var(--text);
   text-align: center;
+  border-spacing: 0rem;
+  overflow: scroll;
+}
+
+table thead,
+table tbody {
+  overflow: scroll;
 }
 
 table caption {
   border-left: 0.2rem solid var(--text);
   border-right: 0.2rem solid var(--text);
   border-top: 0.2rem solid var(--text);
+}
+
+table thead tr th:nth-child(1) {
+  border-bottom: 0.2rem solid var(--text);
+  border-right: 0.2rem solid var(--text);
+}
+
+table thead tr th {
+  border-bottom: 0.2rem solid var(--text);
+}
+
+table tbody tr th {
+  border-right: 0.2rem solid var(--text);
 }
