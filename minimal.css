@@ -162,9 +162,35 @@ pre {
 
 hr {
   background-color: var(--text);
+  opacity: 10%;
   height: 0.1rem;
 }
 
 footer {
   text-align: center;
+}
+
+table {
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
+  border: 0.2rem solid var(--text);
+  text-align: center;
+}
+
+table th {
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
+}
+
+table td {
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
+}
+
+table caption {
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
+  border-left: 0.2rem solid var(--text);
+  border-right: 0.2rem solid var(--text);
+  border-top: 0.2rem solid var(--text);
 }
