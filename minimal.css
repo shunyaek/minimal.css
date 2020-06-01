@@ -47,8 +47,10 @@ footer {
 }
 
 body {
-  padding: 0rem 0rem;
+  padding: 0rem 0rem;  
 }
+
+
 
 header,
 footer {
@@ -81,6 +83,7 @@ header nav a:hover {
   text-decoration: overline;
   text-decoration-color: var(--text);
 }
+
 
 article > p {
   max-width: 50rem;
@@ -115,9 +118,15 @@ img{
   
   max-width: 100%;
   height: auto;
-  border-radius: 15px;
-  opacity: 0.9;
-  object-fit: cover;
+  margin-top: var(--standard-margin);
+  margin-bottom: var(--standard-margin);
+  margin-right: var(--standard-margin);
+  margin-left: var(--standard-margin);
+  object-fit: contain;
+  padding-top: var(--standard-padding);
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+  padding-bottom: var(--standard-padding);
 }
 
 
