@@ -3,11 +3,11 @@
 :root {
   --base-font-size: 16px;
   --standard-margin: 0 auto;
-  --background: #fafafa;
-  --text: #212121;
   --standard-padding: 0.5rem;
   --double-padding: calc(var(--standard-padding) * 2);
   --slim-padding: calc(var(--standard-padding) / 5);
+  --background: #fafafa;
+  --text: #212121;
   --sans-serif-font: "IBM Plex Sans", sans-serif;
   --sans-serif-condensed-font: "IBM Plex Sans Condensed";
   --monospace-font: "IBM Plex Mono", monospace;
@@ -17,9 +17,13 @@
   :root {
     --base-font-size: 16px;
     --standard-margin: 0 auto;
+    --standard-padding: 0.5rem;
+    --double-padding: calc(var(--standard-padding) * 2);
+    --slim-padding: calc(var(--standard-padding) / 5);
     --background: #212121;
     --text: #fafafa;
     --sans-serif-font: "IBM Plex Sans", sans-serif;
+    --sans-serif-condensed-font: "IBM Plex Sans Condensed";
     --monospace-font: "IBM Plex Mono", monospace;
   }
 }
@@ -30,27 +34,26 @@ html {
 
 body,
 header,
+header nav,
 main,
 section,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-footer {
+footer,
+table,
+table caption,
+table td,
+table th {
+  padding: var(--standard-padding);
   margin: var(--standard-margin);
   max-width: none;
+}
+
+body {
+  padding: 0rem 0rem;
+  font-size: clamp(100%, 1rem + 2vw, 1.5rem);
   background-color: var(--background);
   color: var(--text);
   font-family: var(--sans-serif-font);
 }
-
-body {
-  padding: 0rem 0rem;  
-}
-
-
 
 header,
 footer {
@@ -62,9 +65,28 @@ header {
   text-align: start;
 }
 
-header nav {
-  padding: var(--standard-padding);
-  font-size: 1.5rem;
+header nav a:nth-child(1) {
+  color: var(--text);
+  text-decoration: none;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+  border: 0.2rem solid var(--text);
+}
+
+header nav a:nth-child(1):link {
+  color: var(--text);
+  text-decoration: none;
+  padding-left: var(--standard-padding);
+  padding-right: var(--standard-padding);
+}
+
+header nav a:nth-child(1):visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+header nav a:nth-child(1):hover {
+  text-decoration: none;
 }
 
 header nav a:link {
@@ -84,15 +106,25 @@ header nav a:hover {
   text-decoration-color: var(--text);
 }
 
+h2,
+h3,
+h4,
+h5,
+h6,
+section {
+  max-width: 50rem;
+  line-height: 1.25;
+}
 
 article > p {
   max-width: 50rem;
   margin: var(--standard-margin);
   padding: var(--standard-padding);
   text-align: center;
+  font-size: clamp(100%, 1rem + 2vw, 1rem);
 }
 
-article > h1 {
+h1 {
   max-width: 80rem;
   padding-top: var(--standard-padding);
   padding-left: var(--standard-padding);
@@ -100,18 +132,13 @@ article > h1 {
   text-align: center;
   color: var(--text);
   font-family: var(--sans-serif-condensed-font);
+  font-size: clamp(100%, 3rem + 2vw, 3rem);
 }
 
 article > p > time,
 article > p > span {
   font-style: italic;
   font-weight: bold;
-}
-
-section {
-  max-width: 50rem;
-  line-height: 1.25;
-  padding: var(--standard-padding);
 }
 
 img{ 
@@ -122,35 +149,6 @@ img{
   object-fit: cover;
 }
 
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
-h4 {
-  font-size: 2rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.25rem;
-}
-
-p {
-  font-size: 1.25rem;
-}
-
 p a:link,
 p a:visited {
   color: var(--text);
@@ -158,12 +156,16 @@ p a:visited {
   text-decoration-color: var(--text);
 }
 
+li {
+  padding: var(--slim-padding);
+}
+
 code,
 pre {
   font-family: var(--monospace-font);
-  font-weight: bold;
   tab-size: 4;
   white-space: pre-wrap;
+  overflow: scroll;
 }
 
 pre {
@@ -174,9 +176,42 @@ pre {
 
 hr {
   background-color: var(--text);
+  opacity: 10%;
   height: 0.1rem;
 }
 
 footer {
   text-align: center;
+}
+
+table {
+  max-width: 100%;
+  border: 0.2rem solid var(--text);
+  text-align: center;
+  border-spacing: 0rem;
+  overflow: scroll;
+}
+
+table thead,
+table tbody {
+  overflow: scroll;
+}
+
+table caption {
+  border-left: 0.2rem solid var(--text);
+  border-right: 0.2rem solid var(--text);
+  border-top: 0.2rem solid var(--text);
+}
+
+table thead tr th:nth-child(1) {
+  border-bottom: 0.2rem solid var(--text);
+  border-right: 0.2rem solid var(--text);
+}
+
+table thead tr th {
+  border-bottom: 0.2rem solid var(--text);
+}
+
+table tbody tr th {
+  border-right: 0.2rem solid var(--text);
 }
