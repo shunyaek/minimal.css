@@ -115,18 +115,11 @@ section {
 }
 
 img{ 
-  
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
   max-width: 100%;
   height: auto;
-  margin-top: var(--standard-margin);
-  margin-bottom: var(--standard-margin);
-  margin-right: var(--standard-margin);
-  margin-left: var(--standard-margin);
-  object-fit: contain;
-  padding-top: var(--standard-padding);
-  padding-left: var(--standard-padding);
-  padding-right: var(--standard-padding);
-  padding-bottom: var(--standard-padding);
+  object-fit: cover;
 }
 
 
