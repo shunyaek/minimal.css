@@ -129,6 +129,7 @@ h1 {
   padding-top: var(--standard-padding);
   padding-left: var(--standard-padding);
   padding-right: var(--standard-padding);
+  margin: var(--standard-margin);
   text-align: center;
   color: var(--text);
   font-family: var(--sans-serif-condensed-font);
