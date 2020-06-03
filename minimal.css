@@ -142,7 +142,7 @@ article > p > span {
   font-weight: bold;
 }
 
-img { 
+img {
   padding: var(--standard-padding);
   margin: var(--standard-margin);
   max-width: 100%;
