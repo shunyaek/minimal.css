@@ -12,16 +12,16 @@
 
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
             <a href="#">minimal.css</a>
             <a href="#">Blog</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
+            <a href="#">Resume</a>
+            <a href="#">Portfolio</a>
         </nav>
+        <hr>
     </header>
-
-    
-    <hr>
     <main>
 
         <article>
@@ -81,8 +81,7 @@
                     deserunt mollit anim id est laborum.
                 </p>
 
-                <img 
-                    src="https://unsplash.it/600/400" alt="image"> 
+                <img src="https://unsplash.it/600/400" alt="image">
 
                 <h4>Code snippets will look like this!</h4>
                 <p>To print values to the JavaScript console in a browser or to the Node.js console, one can use the
@@ -94,6 +93,21 @@
                 </p>
                 <pre>
                     <code>
+const http = require('http')
+
+const hostname = '127.0.0.1'
+const port = process.env.PORT
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Hello World!\n')
+})
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`)
+})
+
 const http = require('http')
 
 const hostname = '127.0.0.1'
@@ -176,8 +190,11 @@ server.listen(port, hostname, () => {
     </main>
     <hr>
     <footer>
-        &#169 Harshit Doshi 2020
+        &#169 Harshit Doshi
     </footer>
+    <script>
+        document.getElementsByTagName("footer")[0].innerHTML += ` ${new Date().getFullYear()}`
+    </script>
 </body>
 
 </html>
